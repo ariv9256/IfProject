@@ -35,12 +35,42 @@ public class Controller
 		volleyballGame.setScoreBoard(scoreBoard);
 		if(scoreBoard > 15)
 		{
-			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + " points, pick up your game!");
+			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + 
+					" points, pick up your game!");
 		}
 		else
 		{
-			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + " points, you're almost there!");
+			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + 
+					" points, you're almost there!");
 		}
+		
+		userInput = JOptionPane.showInputDialog(null, "How many points did you earn in the last set?");
+		int addPoint = 0;
+		if(validInt(userInput))
+		{
+			addPoint = Integer.parseInt(userInput);
+		}
+		
+		volleyballGame.setAddPoint(addPoint);
+		if (addPoint > 10)
+		{
+			JOptionPane.showMessageDialog(null, "you gained: " + volleyballGame.getAddPoint() +
+					" points, pick it up next set!");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "you gained: " + volleyballGame.getAddPoint() + 
+					" points, good job!");
+		}
+		
+		userInput = JOptionPane.showInputDialog(null, "Did your serve go in the boundaries?");
+		boolean inBounds = false;
+		inBounds = Boolean.parseBoolean(userInput);
+		
+		volleyballGame.setInBounds(inBounds);
+		
+		JOptionPane.showMessageDialog(null, volleyballGame);
+		inputScanner.close();
 		
 	}
 	public boolean validInt(String maybeInt)
