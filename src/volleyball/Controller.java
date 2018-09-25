@@ -11,7 +11,6 @@ import javax.swing.JOptionPane;
 public class Controller
 {
 	private VolleyballModel volleyballGame;
-	
 	private Scanner inputScanner;
 	/**
 	 * Defines variables 
@@ -22,7 +21,6 @@ public class Controller
 		volleyballGame = new VolleyballModel();
 		inputScanner = new Scanner(System.in);
 	}
-	
 	public void start()
 	{
 		String userInput = JOptionPane.showInputDialog(null, "How many points on your scoreboard?");
@@ -33,7 +31,7 @@ public class Controller
 		}
 		
 		volleyballGame.setScoreBoard(scoreBoard);
-		if(scoreBoard > 15)
+		if(scoreBoard < 15)
 		{
 			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + 
 					" points, pick up your game!");
@@ -67,10 +65,23 @@ public class Controller
 		boolean inBounds = false;
 		inBounds = Boolean.parseBoolean(userInput);
 		
-		volleyballGame.setInBounds(inBounds);
 		
-		JOptionPane.showMessageDialog(null, volleyballGame);
-		inputScanner.close();
+		volleyballGame.setInBounds(inBounds);
+		if(inBounds = false)
+		{
+			JOptionPane.showMessageDialog(null, "Serve went in: " + volleyballGame.getInBounds() +
+					", darn.");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "Serve went in: " + volleyballGame.getInBounds() +
+					
+					", good job!.");
+		}
+		
+		
+		
+		loopy();
 		
 	}
 	public boolean validInt(String maybeInt)
@@ -93,9 +104,26 @@ public class Controller
 	{
 		//Define a variable before the loop
 		boolean isFinished = false;
+		int someCount = 0;
 		while (!isFinished)
 		{
-			JOptionPane.showMessageDialog(null, "HII");
+			JOptionPane.showMessageDialog(null, "Shut up");
+			
+			someCount += 1;
+			
+			if (someCount > 3)
+			{
+				
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "no");
+			}
+			isFinished = true;
+		}
+		for (int index = 0; index <10; index++)
+		{
+			JOptionPane.showMessageDialog(null, "This is execution number " + index);
 		}
 	}
 
