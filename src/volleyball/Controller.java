@@ -89,5 +89,14 @@ public class Controller
 		return isValid;
 		
 	}
+	private void loopy()
+	{
+		//Define a variable before the loop
+		boolean isFinished = false;
+		while (!isFinished)
+		{
+			JOptionPane.showMessageDialog(null, "HII");
+		}
+	}
 
 }
