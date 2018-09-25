@@ -107,7 +107,7 @@ public class Controller
 		int someCount = 0;
 		while (!isFinished)
 		{
-			JOptionPane.showMessageDialog(null, "Shut up");
+			JOptionPane.showMessageDialog(null, "GOOD JOB!");
 			
 			someCount += 1;
 			
@@ -117,13 +117,9 @@ public class Controller
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(null, "no");
+				JOptionPane.showMessageDialog(null, "thank.");
 			}
 			isFinished = true;
-		}
-		for (int index = 0; index <10; index++)
-		{
-			JOptionPane.showMessageDialog(null, "This is execution number " + index);
 		}
 	}
 
