@@ -123,5 +123,24 @@ public class Controller
 			isFinished = true;
 		}
 	}
+	private void askUser()
+	{
+		VolleyballModel userVolleyball = new VolleyballModel();
+		
+		String response = JOptionPane.showInputDialog(null, "What is your name fellow volleyball player?");
+		userVolleyball.setPlayerName(response);
+		
+		response = JOptionPane.showInputDialog(null, "Did your serve go in bounds? T/F");
+		userVolleyball.setInBounds(Boolean.parseBoolean(response));
+		
+		response = JOptionPane.showInputDialog(null, "What is your scoreboard number?");
+		userVolleyball.setScoreBoard(Integer.parseInt(response));
+		
+		response = JOptionPane.showInputDialog(null, "How many points in your current/ previous set?");
+		userVolleyball.setAddPoint(Integer.parseInt(response));
+		
+		JOptionPane.showMessageDialog(null, userVolleyball);
+		
+	}
 
 }
