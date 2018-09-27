@@ -25,6 +25,10 @@ public class Controller
 	{
 		String userInput = JOptionPane.showInputDialog(null, "How many points on your scoreboard?");
 		int scoreBoard = 0;
+		while (!validInt(userInput))
+		{
+			userInput = JOptionPane.showInputDialog(null, "Please give a number for you scoreboard :)");
+		}
 		if(validInt(userInput))
 		{
 			scoreBoard = Integer.parseInt(userInput);
@@ -50,7 +54,7 @@ public class Controller
 		}
 		
 		volleyballGame.setAddPoint(addPoint);
-		if (addPoint > 10)
+		if (addPoint < 10)
 		{
 			JOptionPane.showMessageDialog(null, "you gained: " + volleyballGame.getAddPoint() +
 					" points, pick it up next set!");
@@ -60,14 +64,13 @@ public class Controller
 			JOptionPane.showMessageDialog(null, "you gained: " + volleyballGame.getAddPoint() + 
 					" points, good job!");
 		}
-		
 		userInput = JOptionPane.showInputDialog(null, "Did your serve go in the boundaries?");
 		boolean inBounds = false;
 		inBounds = Boolean.parseBoolean(userInput);
 		
 		
 		volleyballGame.setInBounds(inBounds);
-		if(inBounds = false)
+		if(inBounds == false)
 		{
 			JOptionPane.showMessageDialog(null, "Serve went in: " + volleyballGame.getInBounds() +
 					", darn.");
@@ -78,8 +81,6 @@ public class Controller
 					
 					", good job!.");
 		}
-		
-		
 		
 		loopy();
 		

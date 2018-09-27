@@ -12,7 +12,6 @@ public class VolleyballModel
 	{
 		//Default constructor 
 	}
-	
 	public VolleyballModel (int scoreBoard, boolean inBounds, int addPoint, String playerName)
 	{
 		this.scoreBoard = scoreBoard;
