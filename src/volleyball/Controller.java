@@ -33,12 +33,19 @@ public class Controller
 		{
 			scoreBoard = Integer.parseInt(userInput);
 		}
-		
 		volleyballGame.setScoreBoard(scoreBoard);
 		if(scoreBoard < 15)
 		{
 			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + 
 					" points, pick up your game!");
+		}
+		else if(scoreBoard == 0)
+		{
+			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + " wow. That's unfortunate.");
+		}
+		else if(scoreBoard == 25)
+		{
+			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + " great job! you killed it!");
 		}
 		else
 		{
@@ -58,6 +65,14 @@ public class Controller
 		{
 			JOptionPane.showMessageDialog(null, "you gained: " + volleyballGame.getAddPoint() +
 					" points, pick it up next set!");
+		}
+		else if(addPoint == 0)
+		{
+			JOptionPane.showMessageDialog(null, "you gained: " + volleyballGame.getAddPoint() + " points, sad days.");
+		}
+		else if(addPoint == 25)
+		{
+			JOptionPane.showMessageDialog(null, "you gained: " + volleyballGame.getAddPoint() + " points, fantastic job!");
 		}
 		else
 		{
