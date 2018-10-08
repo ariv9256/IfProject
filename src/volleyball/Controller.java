@@ -7,6 +7,7 @@ package volleyball;
 import java.util.Scanner;
 import model.VolleyballModel;
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
 
 public class Controller
 {
@@ -41,11 +42,13 @@ public class Controller
 		}
 		else if(scoreBoard == 0)
 		{
-			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + " wow. That's unfortunate.");
+			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + 
+					" points, wow. That's unfortunate.");
 		}
 		else if(scoreBoard == 25)
 		{
-			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + " great job! you killed it!");
+			JOptionPane.showMessageDialog(null, "your scoreboard has " + volleyballGame.getScoreBoard() + 
+					" points, great job! you killed it!");
 		}
 		else
 		{
@@ -138,6 +141,36 @@ public class Controller
 			isFinished = true;
 		}
 	}
+	private void lotsOfRun()
+	{
+		//Local variables are visible in the method they are defined in!
+		//They only have SCOPE to that method
+		
+		ArrayList<VolleyballModel> myGames = new ArrayList<VolleyballModel>();
+		
+		VolleyballModel sampleVolleyballModel = new VolleyballModel();
+		VolleyballModel otherVolleyballModel = new VolleyballModel();
+		
+		myGames.add(sampleVolleyballModel);
+		myGames.add(otherVolleyballModel);
+		
+		//Standard forward loop, (from start, to the end, counting by one.)
+		for(int index = 0; index < myGames.size(); index += 1)
+		{
+			
+		}
+		//Standard backwards loop, (starting from the back with inclusive end.)
+		for(int index = myGames.size() - 1; index >= 0; index -= 1)
+		{
+			
+		}
+		for(VolleyballModel current: myGames)
+		{
+			JOptionPane.showMessageDialog(null, "The run is named: " + current.getName() + ".");
+		}
+		
+	}
+	
 	private void askUser()
 	{
 		VolleyballModel userVolleyball = new VolleyballModel();
