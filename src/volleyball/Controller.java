@@ -101,6 +101,7 @@ public class Controller
 		}
 		
 		loopy();
+		askUser();
 		
 	}
 	public boolean validInt(String maybeInt)
@@ -155,18 +156,18 @@ public class Controller
 		myGames.add(otherVolleyballModel);
 		
 		//Standard forward loop, (from start, to the end, counting by one.)
-		for(int index = 0; index < myGames.size(); index += 1)
-		{
-			
-		}
+		//for(int index = 0; index < myGames.size(); index += 1)
+		//{
+		//	JOptionPane.showMessageDialog(null, "Your volleyball game is " + index);
+		///}
 		//Standard backwards loop, (starting from the back with inclusive end.)
-		for(int index = myGames.size() - 1; index >= 0; index -= 1)
-		{
+		//for(int index = myGames.size() - 1; index >= 0; index -= 1)
+		//{
 			
-		}
+		//}
 		for(VolleyballModel current: myGames)
 		{
-			JOptionPane.showMessageDialog(null, "The run is named: " + current.getName() + ".");
+			JOptionPane.showMessageDialog(null, "The run is named: " + current.getScoreBoard() + ".");
 		}
 		
 	}
